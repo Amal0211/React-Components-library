@@ -2,7 +2,7 @@
 .main-container {
     position: relative;
     width: 80%;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
     border: 2px solid #ddd;
@@ -11,11 +11,17 @@
 }
 
 /* Image container styling */
+.image-container{
+    overflow: hidden;
+}
 .image-container img {
     width: 100%;
-    height: auto;
+    height: 500px;
     display: block;
     border-radius: 10px;
+    object-fit: contain;
+    transition: transform 0.5s ease-in-out;
+
 }
 
 /* Arrows styling */
@@ -63,4 +69,42 @@
     padding: 20px;
     color: red;
     font-weight: bold;
+}
+.thumbnail-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.thumbnail {
+    width: 60px;  /* Size of the thumbnails */
+    height: auto;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.5);  /* Slight zoom on hover */
+    opacity: 0.8;
+}
+
+.thumbnail.active {
+    border: 2px solid #000;  /* Highlight the current thumbnail */
+    transform: scale(1.2);   /* Make the active thumbnail slightly larger */
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        width: 95%;
+    }
+
+    .image-container img {
+        height: auto; /* Adjusts height automatically */
+    }
+
+    .arrowToLeft, .arrowToRight {
+        font-size: 1.5rem; /* Make arrows smaller on mobile */
+    }
 }
