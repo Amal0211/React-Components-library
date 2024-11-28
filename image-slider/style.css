@@ -1,0 +1,66 @@
+/* Main container styling for the image slider */
+.main-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image container styling */
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Arrows styling */
+.arrowToLeft, .arrowToRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+/* Left arrow position */
+.arrowToLeft {
+    left: 10px;
+}
+
+/* Right arrow position */
+.arrowToRight {
+    right: 10px;
+}
+
+/* Hover effect on arrows */
+.arrowToLeft:hover, .arrowToRight:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #000;
+}
+
+/* Placeholder for loading message */
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Error message styling */
+.error-message {
+    text-align: center;
+    padding: 20px;
+    color: red;
+    font-weight: bold;
+}
